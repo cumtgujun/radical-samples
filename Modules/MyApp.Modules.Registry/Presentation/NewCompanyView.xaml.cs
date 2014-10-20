@@ -10,17 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MyApp.Contracts;
 
-namespace MyApp.Presentation
+namespace MyApp.Modules.Registry.Presentation
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for NewCompanyView.xaml
     /// </summary>
-    public partial class MainView : Window, IMainView
+    public partial class NewCompanyView : UserControl
     {
-        public MainView()
+        public NewCompanyView()
         {
             InitializeComponent();
         }

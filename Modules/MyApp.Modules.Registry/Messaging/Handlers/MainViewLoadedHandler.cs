@@ -20,6 +20,8 @@ namespace MyApp.Modules.Registry.Messaging.Handlers
 
         public IRegionService RegionService { get; set; }
 
+        public IMessageBroker Broker { get; set; }
+
         protected override bool OnShouldHandle( object sender, ViewLoaded message )
         {
             var viewModel = this.Conventions.GetViewDataContext( message.View, ViewDataContextSearchBehavior.LocalOnly );
@@ -40,7 +42,7 @@ namespace MyApp.Modules.Registry.Messaging.Handlers
                     Command = DelegateCommand.Create()
                                 .OnExecute( o =>
                                 {
-                                    System.Windows.MessageBox.Show( "Clicked on create!" );
+                                    this.Broker.Broadcast( this, new Messaging.CreateNewCompany() );
                                 } )
                 } );
 

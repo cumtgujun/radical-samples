@@ -7,7 +7,7 @@
         xmlns:crg="clr-namespace:MyApp.CustomRegions;assembly=MyApp.CustomRegions"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d" 
-        Title="MainView" Height="300" Width="300">
+        Title="MainView" Height="400" Width="600">
     <DockPanel LastChildFill="True">
 
         <Menu DockPanel.Dock="Top" rg:RegionService.Region="{crg:MenuRegion Name=MainMenuRegion}">
