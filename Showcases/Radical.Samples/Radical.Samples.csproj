@@ -238,9 +238,14 @@
       <DependentUpon>TabControlRegionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\TabControlRegion\TabControlRegionViewModel.cs" />
-    <Compile Include="Presentation\Validation\ValidationSampleView.xaml.cs">
-      <DependentUpon>ValidationSampleView.xaml</DependentUpon>
+    <Compile Include="Presentation\Validation\AbstractValidationSampleViewModel.cs" />
+    <Compile Include="Presentation\Validation\CanBeValidatedSampleView.xaml.cs">
+      <DependentUpon>CanBeValidatedSampleView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Validation\RequireValidationSampleView.xaml.cs">
+      <DependentUpon>RequireValidationSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Validation\CanBeValidatedSampleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -252,7 +257,7 @@
     <Compile Include="Presentation\Memento\SimpleGraph\Person.cs" />
     <Compile Include="Presentation\Memento\SimpleGraph\PersonViewModel.cs" />
     <Compile Include="Presentation\Memento\SimpleGraph\SimpleGraphViewModel.cs" />
-    <Compile Include="Presentation\Validation\ValidationSampleViewModel.cs" />
+    <Compile Include="Presentation\Validation\RequireValidationSampleViewModel.cs" />
     <Compile Include="Services\SamplesManager.cs" />
     <Compile Include="ComponentModel\Address.cs" />
     <Compile Include="ComponentModel\Person.cs" />
@@ -352,7 +357,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Validation\ValidationSampleView.xaml">
+    <Page Include="Presentation\Validation\CanBeValidatedSampleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Validation\RequireValidationSampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

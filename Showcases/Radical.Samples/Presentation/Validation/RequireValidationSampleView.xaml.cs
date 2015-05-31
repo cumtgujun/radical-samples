@@ -18,9 +18,9 @@ namespace Topics.Radical.Presentation.Validation
 	/// <summary>
 	/// Interaction logic for ValidationSampleView.xaml
 	/// </summary>
-	public partial class ValidationSampleView : UserControl
+	public partial class RequireValidationSampleView : UserControl
 	{
-		public ValidationSampleView()
+		public RequireValidationSampleView()
 		{
 			InitializeComponent();
 		}
