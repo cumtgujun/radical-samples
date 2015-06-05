@@ -26,10 +26,16 @@ namespace Topics.Radical.Presentation.Validation
 				.AddCascadeChangeNotifications( () => this.Sample );
 
 			this.SetInitialPropertyValue( () => this.MergeErrors, true )
-				.OnChanged( pvc =>
-				{
-					this.ValidationService.MergeValidationErrors = this.MergeErrors;
-				} );
+                .OnChanged( pvc =>
+                {
+                    var invalid = this.ValidationService.GetInvalidProperties();
+                    this.ValidationService.MergeValidationErrors = this.MergeErrors;
+                    foreach( var item in invalid )
+                    {
+                        this.OnPropertyChanged( item );
+                        this.OnErrorsChanged( item );
+                    }
+                } );
 		}
 
 		protected override IValidationService GetValidationService()

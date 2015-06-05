@@ -32,16 +32,11 @@ namespace Topics.Radical.Presentation.Validation
 					this.ValidationService.MergeValidationErrors = this.MergeErrors;
                     foreach( var item in invalid )
                     {
-                        var x = this.IsResettingValidation;
-                        this.ValidateProperty( item );
+                        this.OnPropertyChanged( item );
+                        this.OnErrorsChanged( item );
                     }
 				} );
 		}
-
-        protected override void OnPropertyChanged( PropertyChangedEventArgs e )
-        {
-            base.OnPropertyChanged( e );
-        }
 
 		protected override IValidationService GetValidationService()
 		{
