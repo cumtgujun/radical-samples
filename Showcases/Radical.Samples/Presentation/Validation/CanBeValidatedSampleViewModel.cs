@@ -28,9 +28,20 @@ namespace Topics.Radical.Presentation.Validation
 			this.SetInitialPropertyValue( () => this.MergeErrors, true )
 				.OnChanged( pvc =>
 				{
+                    var invalid = this.ValidationService.GetInvalidProperties();
 					this.ValidationService.MergeValidationErrors = this.MergeErrors;
+                    foreach( var item in invalid )
+                    {
+                        var x = this.IsResettingValidation;
+                        this.ValidateProperty( item );
+                    }
 				} );
 		}
+
+        protected override void OnPropertyChanged( PropertyChangedEventArgs e )
+        {
+            base.OnPropertyChanged( e );
+        }
 
 		protected override IValidationService GetValidationService()
 		{
