@@ -141,6 +141,8 @@
     <Compile Include="ComponentModel\Categories.cs" />
     <Compile Include="ComponentModel\SampleAttribute.cs" />
     <Compile Include="Messaging\Handlers\AsyncRegionsViewLoadedHandler.cs" />
+    <Compile Include="Messaging\Handlers\OpenChildWindowSampleMessageHandler.cs" />
+    <Compile Include="Messaging\OpenChildWindowSampleMessage.cs" />
     <Compile Include="Presentation\AsyncRegions\AsyncRegionsView.xaml.cs">
       <DependentUpon>AsyncRegionsView.xaml</DependentUpon>
     </Compile>
@@ -172,6 +174,13 @@
     </Compile>
     <Compile Include="Presentation\DragAndDrop\DragAndDropSampleViewModel.cs" />
     <Compile Include="Presentation\DragAndDrop\Person.cs" />
+    <Compile Include="Presentation\OpenChildWindow\ChildView.xaml.cs">
+      <DependentUpon>ChildView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\OpenChildWindow\OpenChildWindowView.xaml.cs">
+      <DependentUpon>OpenChildWindowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\OpenChildWindow\OpenChildWindowViewModel.cs" />
     <Compile Include="Presentation\Effects\EffectView.xaml.cs">
       <DependentUpon>EffectView.xaml</DependentUpon>
     </Compile>
@@ -294,6 +303,14 @@
     <Page Include="Presentation\DragAndDrop\DragAndDropSampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\OpenChildWindow\ChildView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\OpenChildWindow\OpenChildWindowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Presentation\Effects\EffectView.xaml">
       <SubType>Designer</SubType>
